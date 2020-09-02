@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#map {
+  height: 50vh;
+  width: 90%;
+  margin: auto;
+}
+.container {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}

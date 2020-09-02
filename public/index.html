@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Simple Map</title>
+    <style type="text/css">
+      #map {
+        height: 80vh;
+        width: 90%;
+        margin: auto;
+      }
+      .container {
+        text-align: center;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <script src="/socket.io/socket.io.js"></script>
+
+  <body>
+    <div class="container">
+      <h1>Simple Map Tracker</h1>
+
+      <span class="badge badge-primary" id="online_users"></span>
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Developer's Name</th>
+            <th>Socket Id</th>
+          </tr>
+        </thead>
+        <tbody id="table_body">
+          <tr>
+            <th scope="row">1</th>
+            <td><span class="badge badge-secondary">Crispen Gari</span></td>
+            <td><span class="badge badge-dark">E63szPtYSxwTGmsxAAAA</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="map"></div>
+    <script src="index.js"></script>
+    <script src="index.map.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuiJgmuamocdmNAgpFoGuffwrRX7ZM3hA&callback=initMap"
+    ></script>
+  </body>
+</html>
